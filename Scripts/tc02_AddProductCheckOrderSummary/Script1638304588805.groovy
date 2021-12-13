@@ -132,7 +132,6 @@ def AddProducttoCart(String suffix, def ExpectedVal) {
 		ExpectedVal = Double.parseDouble(ExpectedVal)
 		
 		
-		
 		// 3. Compare the unit price vs the datasheet
 		// Put an If statement here to report that the "ACTUAL" unit price is/isNot equal to the "EXPECTED" unit price
 		if (WebUI.verifyEqual(actual_product_unitprice, ExpectedVal, FailureHandling.CONTINUE_ON_FAILURE)) {
@@ -188,10 +187,14 @@ def AddProducttoCart(String suffix, def ExpectedVal) {
 		//WebUI.click(findTestObject('Object Repository/tc05/Page_Learning A-Z Ordering - Cart/button_Add to Cart_RP'))
 		WebUI.click(findTestObject('Object Repository/Page_Learning A-Z Ordering - Cart/button_Add to Cart_RP'))
 		
+		
 	}
 
 	
 }
+
+// added this line to trigger in jenkins
+
 
 WebUI.closeBrowser()
 
