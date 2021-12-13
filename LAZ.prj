@@ -6,6 +6,7 @@
    <UUID>ddba81c4-82a0-4ff9-a67b-80c4aa52ba57</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>C:\Users\dbiggs\Katalon Studio\LAZ\LAZ.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
