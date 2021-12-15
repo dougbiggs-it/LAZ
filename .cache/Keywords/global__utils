@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "6D034B8874A781E98DCC7B08F1B1547F",
+  "keywordClasses": [
+    {
+      "name": "global.utils",
+      "keywordMethods": [
+        {
+          "name": "loginRazPlus",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
