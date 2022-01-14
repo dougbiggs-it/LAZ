@@ -20,12 +20,16 @@ import org.openqa.selenium.Keys as Keys
 WebUI.disableSmartWait()
 
 /*
+ Assumptions:
+ Dependencies: 
+ 
   This section does the following:
   1. Put the entire order summary into a String variable --> str = WebUI.getText()
   2. Read the string into array parsed/split by "$"
   3. Assign each element to a variable
   4. Print the variables
  */
+
 
 /*
 // Load Unit prices from datasheet (See Data Files)
@@ -42,12 +46,6 @@ def ConnectedClassroomUnit = findTestData('Prices_2021').getValue('UnitPrice', 9
 
 // Call method from Keywords/reusables/data.groovy to load Unit prices (Prices_2021) from datasheet (See Data Files)
 CustomKeywords.'global.data.loadRazPlusPrices'()
-
-//WebUI.openBrowser('')
-
-//WebUI.maximizeWindow()
-
-//WebUI.navigateToUrl('https://pre.raz-kids.com/')
 
 // Call method from Keywords/reusables/utils.groovy
 CustomKeywords.'global.utils.loginRazPlus'()
@@ -193,12 +191,5 @@ def AddProducttoCart(String suffix, def ExpectedVal) {
 	
 }
 
-// added this line to trigger in jenkins
-// added this line to trigger in jenkins
-// added this line to trigger in jenkins 12/13/21 2:03pm
-// added this line to trigger in jenkins 12/13/21 2:56pm
-// added this line to trigger in jenkins 12/15/21 10:10am
-// added this line to trigger in jenkins 12/15/21 12:45pm
-
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 

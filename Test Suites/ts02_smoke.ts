@@ -15,6 +15,6 @@
       <guid>3159d653-daf5-4626-8f50-66eedc269f82</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/tc02_AddProductCheckOrderSummary</testCaseId>
+      <testCaseId>Test Cases/razplus/tc02_AddProductCheckOrderSummary</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

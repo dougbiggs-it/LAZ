@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "6D034B8874A781E98DCC7B08F1B1547F",
+  "keywordFileContentHash": "8AA3FD1CDD8338B478A3CBF36F44AD73",
   "keywordClasses": [
     {
       "name": "global.utils",
@@ -7,6 +7,30 @@
         {
           "name": "loginRazPlus",
           "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "ts",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "AddProductstoCart",
+          "parameters": [
+            {
+              "name": "suffix",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
           "javadoc": ""
         }
       ]

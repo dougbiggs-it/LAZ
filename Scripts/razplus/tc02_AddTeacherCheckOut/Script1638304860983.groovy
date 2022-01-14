@@ -18,16 +18,20 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 /*
-WebUI.disableSmartWait()
+  Assumption: user is ready to checkout
+  Dependencies: 
+   
+  This reusable script does the following:
+  
+  1. Assigns the Objects to variables for clarity
+  2. Defines contact details.   *Hard-coded, should probably be in a data file that gets read in*
+  3. Provides user (Teacher) information and payment method
+  4. Generate a quote.	**Method to call to turn on/off the "Generate Quote" steps**
+  
+ */
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl('https://pre.raz-kids.com/')
-*/
-
-CustomKeywords.'global.utils.loginRazPlus'()
+// Create a timestamp id for a unique username
+id = CustomKeywords.'global.utils.ts'()
 
 
 // Objects
@@ -70,16 +74,16 @@ def str_zipcode = '33334'
 def str_phone = '9545551212'
 // Additional User Details
 def str_occupation = '39'
-def str_username = 'Automation_User'
+def str_username = 'AutoUser' +id
 def str_state = '31'
 def str_district = '00679974'
 def str_school = '00681599'
 def encryptedpassword = 'AHzSUGJgRo0dvnkyA0znMQ=='
 
-// Order now button
-WebUI.click(btn_ordernow)
-// Continue to Cart button
-WebUI.click(btn_ContinueToCart)
+// Visual cue sent to the console
+System.out.println('Username: ' +str_username)
+
+
 // Checkout button
 WebUI.click(btn_checkout)
 // Email
@@ -133,8 +137,27 @@ WebUI.click(radio_checkmoneyorder)
 // Confirm I understand
 WebUI.click(input_confirmation)
 
+// Use this call to turn on/off the "Generate Quote" steps
+//GenerateQuote()
 
-// Generate Quote
-//WebUI.click(btn_generateQuote)
+
+def GenerateQuote() {
+
+	def btn_generateQuote = findTestObject('Object Repository/Page_Learning A-Z Ordering -/btn_generateQuote')
+	
+	// Generate Quote
+	WebUI.click(btn_generateQuote)
+	
+	Thread.sleep(3000)
+	// Verify text after Generate Quote was clicked and email was sent
+	WebUI.verifyElementText(findTestObject('Object Repository/Page_Learning A-Z Ordering -/h1_Almost Finished'), 'Almost Finished!')
+	// verify if element exists
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Learning A-Z Ordering -/h1_Almost Finished'), 30)
+	
+
+	
+}
+
+
 
 

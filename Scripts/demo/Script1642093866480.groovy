@@ -17,23 +17,3 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.disableSmartWait()
-
-//WebUI.openBrowser('')
-
-//WebUI.maximizeWindow()
-
-//WebUI.navigateToUrl('https://pre.raz-kids.com/')
-
-def d = new Date()
-String ts = d.format('MMddyyHHmmss')
-System.out.println('TS: ' +ts)
-
-//Thread.sleep(5000)
-
-
-
-
-// comment 12/15 at 12:57p
-//WebUI.closeBrowser()
-

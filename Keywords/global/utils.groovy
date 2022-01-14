@@ -36,4 +36,43 @@ public class utils {
 		WebUI.navigateToUrl('https://pre.raz-kids.com/')
 
 	}
-}
+
+	// timestamp
+	@Keyword (keywordObject = "Browser")
+	def String ts() {
+
+		def dt = new Date()
+		String t = dt.format('MMddHHmmss')
+
+		return t
+
+	}
+
+	//---------------------------------------------------------------------------------------
+	@Keyword (keywordObject = "Browser")
+	def AddProductstoCart(String suffix) {
+
+				
+		// Concat the button name prefix w/ suffix
+		def btn_AddToCart = findTestObject('Page_Learning A-Z Ordering - Cart/button_Add to Cart_' +suffix)
+		//def txt_AddClassrooms = findTestObject('Page_Learning A-Z Ordering - Cart/txt_NumberOfClassrooms_' +suffix)
+
+		// Add product
+		WebUI.click(btn_AddToCart)
+
+		// Increase # of Classrooms to 2
+		//WebUI.clearText(txt_AddClassrooms)
+		//WebUI.sendKeys(txt_AddClassrooms, "5")
+		Thread.sleep(1000)
+
+
+	}
+
+	//---------------------------------------------------------------------------------------
+ 
+
+
+
+	}
+
+	
