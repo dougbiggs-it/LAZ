@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Setup a teacher with 2 of each classroom. (Raz-Kids, Raz-Plus, Readin A-Z, ELL Edition, Connected Classroom, Headsprout, Science A-Z, Writing A-Z and Vocabulary A-Z )</description>
+   <description>steps 2 thru 17
+Doc:  _Test Plan - Smoke Test Google Doc
+Tab:   Create New Classroom w/RAZ &amp; RK
+
+Setup a teacher with 2 of each classroom. (Raz-Kids, Raz-Plus, Readin A-Z, ELL Edition, Connected Classroom, Headsprout, Science A-Z, Writing A-Z and Vocabulary A-Z )</description>
    <name>tc03_TeacherClassroomSetup</name>
    <tag>smoke</tag>
    <comment></comment>

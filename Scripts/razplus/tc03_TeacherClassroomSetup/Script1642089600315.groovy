@@ -18,9 +18,12 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 /*
- Assumptions: none
- Dependencies: 
-  
+
+  Assumptions: User is ready to checkout.
+  Dependencies:
+  Author:	Doug Biggs
+  Date Created:	01-13-2022
+  Date Updated: 
   
  This script does the following:
  
@@ -28,17 +31,19 @@ import org.openqa.selenium.Keys as Keys
  2. Loads data: loadRazPlusPrices'()
  3. Navigates to cart
  4. Adds 2 of each classroom
- 5. Call checkout: razplus/tc02_AddTeacherCheckOut
+ 5. Call checkout: razplus/tc02_AddTeacherCheckOut  (this will generate an email)
  
+  Notes:
+   
 */
 
 WebUI.disableSmartWait()
 
 // Call method from Keywords/reusables/data.groovy to load Unit prices (Prices_2021) from datasheet (See Data Files)
-CustomKeywords.'global.data.loadRazPlusPrices'()
+CustomKeywords.'com.laz.utilities.data.loadRazPlusPrices'()
 
 // Call method from Keywords/reusables/utils.groovy
-CustomKeywords.'global.utils.loginRazPlus'()
+CustomKeywords.'com.laz.utilities.utils.loginRazPlus'()
 
 // Click Order Now
 WebUI.click(findTestObject('Object Repository/Page_Raz-Kids/btn_OrderNow'))
@@ -55,7 +60,8 @@ for (i; i<=9; i++) {
 	prodID = findTestData('Prices_2021').getValue('ProdID', i)
 			
 	// 1. add all products to the cart
-	CustomKeywords.'global.utils.AddProductstoCart'(prodID)
+	// Note:  This is *NOT* the same call as: "global.data.loadRazPlusPrices()"
+	CustomKeywords.'com.laz.utilities.utils.AddProductstoCart'(prodID)
 
 }
 

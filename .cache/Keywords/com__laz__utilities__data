@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "59BDF0AA808465B28734F50C3F8BC554",
+  "keywordClasses": [
+    {
+      "name": "com.laz.utilities.data",
+      "keywordMethods": [
+        {
+          "name": "loadRazPlusPrices",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>steps 22 thru 32 
+Doc:  _Test Plan - Smoke Test Google Doc
+Tab:   Create New Classroom w/RAZ &amp; RK</description>
+   <name>tc04_ConfirmPayforRAZRKUser</name>
+   <tag>smoke</tag>
+   <comment></comment>
+   <testCaseGuid>84bcd04e-687b-445e-aaab-22b5a50c0ee2</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>64d9e218-6db4-4ef7-9715-e74038db6ceb</id>
+      <masked>false</masked>
+      <name>user</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>91bfcdd1-1462-46fe-b25b-997109699812</id>
+      <masked>false</masked>
+      <name>pwd</name>
+   </variable>
+</TestCaseEntity>

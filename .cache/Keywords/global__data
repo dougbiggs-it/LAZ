@@ -1,16 +1,15 @@
 {
-  "keywordFileContentHash": "751C81DA76FB63A18157718042BA0391",
+  "keywordFileContentHash": "39F975D2AE8C997E6E0AC42970CB4EE1",
   "keywordClasses": [
     {
       "name": "global.data",
       "keywordMethods": [
         {
           "name": "loadRazPlusPrices",
-          "parameters": [],
-          "javadoc": ""
+          "parameters": []
         }
       ]
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

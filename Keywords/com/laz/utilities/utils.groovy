@@ -1,4 +1,4 @@
-package global
+package com.laz.utilities
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -20,12 +20,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
 public class utils {
 
-	@Keyword (keywordObject = "Browser")
+	@Keyword (keywordObject = "util")
 	def loginRazPlus() {
-		// enter your code here
-		// you can use either Groovy or Java
+
+		// Open browser and navigate to URL
 
 		WebUI.disableSmartWait()
 
@@ -37,8 +49,10 @@ public class utils {
 
 	}
 
-	// timestamp
-	@Keyword (keywordObject = "Browser")
+
+
+	// Create timestamp to be used as a suffix for unique username
+	@Keyword (keywordObject = "util")
 	def String ts() {
 
 		def dt = new Date()
@@ -48,31 +62,41 @@ public class utils {
 
 	}
 
-	//---------------------------------------------------------------------------------------
-	@Keyword (keywordObject = "Browser")
+
+
+	@Keyword (keywordObject = "util")
 	def AddProductstoCart(String suffix) {
 
-				
-		// Concat the button name prefix w/ suffix
+		// Concatenate the button name prefix w/ suffix
 		def btn_AddToCart = findTestObject('Page_Learning A-Z Ordering - Cart/button_Add to Cart_' +suffix)
-		//def txt_AddClassrooms = findTestObject('Page_Learning A-Z Ordering - Cart/txt_NumberOfClassrooms_' +suffix)
 
 		// Add product
 		WebUI.click(btn_AddToCart)
 
-		// Increase # of Classrooms to 2
-		//WebUI.clearText(txt_AddClassrooms)
-		//WebUI.sendKeys(txt_AddClassrooms, "5")
 		Thread.sleep(1000)
 
 
 	}
 
-	//---------------------------------------------------------------------------------------
- 
+
+	//==================
+
+	//==================
 
 
 
-	}
 
-	
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

@@ -1,8 +1,8 @@
 {
-  "keywordFileContentHash": "4371DEDBCDD234506A92BABA72033892",
+  "keywordFileContentHash": "A56419662FB3E7C7E239256E86DBE4EE",
   "keywordClasses": [
     {
-      "name": "global.utils",
+      "name": "com.laz.utilities.utils",
       "keywordMethods": [
         {
           "name": "loginRazPlus",

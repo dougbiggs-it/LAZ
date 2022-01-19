@@ -1,24 +1,14 @@
 {
-  "keywordFileContentHash": "4371DEDBCDD234506A92BABA72033892",
+  "keywordFileContentHash": "BD57133B9D7D2E0B7448AF9FAB0B1140",
   "keywordClasses": [
     {
-      "name": "global.utils",
+      "name": "com.laz.utilities.WriteExcel",
       "keywordMethods": [
         {
-          "name": "loginRazPlus",
-          "parameters": [],
-          "javadoc": ""
-        },
-        {
-          "name": "ts",
-          "parameters": [],
-          "javadoc": ""
-        },
-        {
-          "name": "AddProductstoCart",
+          "name": "updateUsername",
           "parameters": [
             {
-              "name": "suffix",
+              "name": "name",
               "initialExpression": "",
               "type": {
                 "fullClassName": "java.lang.String",

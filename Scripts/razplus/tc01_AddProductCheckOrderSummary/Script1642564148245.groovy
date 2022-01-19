@@ -20,14 +20,22 @@ import org.openqa.selenium.Keys as Keys
 WebUI.disableSmartWait()
 
 /*
- Assumptions:
- Dependencies: 
+  
+  Assumptions: User is ready to checkout.
+  Dependencies:
+  Author:	Doug Biggs
+  Date Created:	01-13-2022
+  Date Updated: 
  
   This section does the following:
+  
   1. Put the entire order summary into a String variable --> str = WebUI.getText()
   2. Read the string into array parsed/split by "$"
   3. Assign each element to a variable
   4. Print the variables
+
+ Notes:
+ 
  */
 
 
@@ -45,10 +53,10 @@ def ConnectedClassroomUnit = findTestData('Prices_2021').getValue('UnitPrice', 9
 */
 
 // Call method from Keywords/reusables/data.groovy to load Unit prices (Prices_2021) from datasheet (See Data Files)
-CustomKeywords.'global.data.loadRazPlusPrices'()
+CustomKeywords.'com.laz.utilities.data.loadRazPlusPrices'()
 
 // Call method from Keywords/reusables/utils.groovy
-CustomKeywords.'global.utils.loginRazPlus'()
+CustomKeywords.'com.laz.utilities.utils.loginRazPlus'()
 
 // Click Order Now
 WebUI.click(findTestObject('Object Repository/Page_Raz-Kids/btn_OrderNow'))

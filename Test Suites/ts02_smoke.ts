@@ -12,9 +12,30 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>9900d61d-6d44-4e00-a4f3-8ee2ca58bd95</testSuiteGuid>
    <testCaseLink>
-      <guid>3159d653-daf5-4626-8f50-66eedc269f82</guid>
+      <guid>96369527-7f1e-433c-9fc7-e4a438829ef9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/razplus/tc02_AddProductCheckOrderSummary</testCaseId>
+      <testCaseId>Test Cases/razplus/tc04_ConfirmPayforRAZRKUser</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>05a18b06-6245-438e-a88c-98c25a5b63fa</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Usernames</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>05a18b06-6245-438e-a88c-98c25a5b63fa</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>user</value>
+         <variableId>64d9e218-6db4-4ef7-9715-e74038db6ceb</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>05a18b06-6245-438e-a88c-98c25a5b63fa</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>pwd</value>
+         <variableId>91bfcdd1-1462-46fe-b25b-997109699812</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

@@ -17,9 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+//import java.io.FileInputStream;
+//import java.io.FileNotFoundException;
+//import java.io.IOException;
+//import java.util.Date;
+//import org.apache.poi.xssf.usermodel.XSSFCell;
+//import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+//import java.lang.String
 /*
-  Assumption: user is ready to checkout
-  Dependencies: 
+  
+  Assumptions: User is ready to checkout.
+  Dependencies:
+  Author:	Doug Biggs
+  Date Created:	01-13-2022
+  Date Updated: 
    
   This reusable script does the following:
   
@@ -28,11 +42,12 @@ import org.openqa.selenium.Keys as Keys
   3. Provides user (Teacher) information and payment method
   4. Generate a quote.	**Method to call to turn on/off the "Generate Quote" steps**
   
+  Notes:  Email address should be changed to generic service account that can be monitored
+  
  */
 
 // Create a timestamp id for a unique username
-id = CustomKeywords.'global.utils.ts'()
-
+id = CustomKeywords.'com.laz.utilities.utils.ts'()
 
 // Objects
 btn_ordernow = findTestObject('Object Repository/Page_Raz-Kids/btn_OrderNow')
@@ -138,7 +153,10 @@ WebUI.click(radio_checkmoneyorder)
 WebUI.click(input_confirmation)
 
 // Use this call to turn on/off the "Generate Quote" steps
-//GenerateQuote()
+GenerateQuote()
+
+// Write str_username to Usernames datafile
+CustomKeywords.'com.laz.utilities.WriteExcel.updateUsername'(str_username)
 
 
 def GenerateQuote() {

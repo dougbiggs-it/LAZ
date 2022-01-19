@@ -1,4 +1,4 @@
-package global
+package com.laz.utilities
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -22,7 +22,7 @@ import internal.GlobalVariable
 
 public class data {
 
-	@Keyword (keywordObject = "Browser")
+	@Keyword (keywordObject = "datafile")
 	def loadRazPlusPrices() {
 
 		// Load Unit prices from datasheet (See Data Files)
