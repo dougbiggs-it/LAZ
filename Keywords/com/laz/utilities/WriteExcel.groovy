@@ -22,34 +22,61 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
- 
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class WriteExcel {
-  
-  
-  @Keyword
-  public void updateUsername(String name) throws IOException{
-    FileInputStream fis = new FileInputStream("C:\\DB\\Automation\\work\\data\\UserNames.xlsx");
-    XSSFWorkbook workbook = new XSSFWorkbook(fis);
-    XSSFSheet sheet = workbook.getSheet("Sheet1");
-	
-    int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
 
-	// This row will append to the bottom 
-	//Row row = sheet.createRow(rowCount+1);
+
+	@Keyword
+	public void updateUsername(String name) throws IOException{
+		FileInputStream fis = new FileInputStream("C:\\DB\\Automation\\work\\data\\UserNames.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+
+		int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
+
+		// This row will append to the bottom
+		//Row row = sheet.createRow(rowCount+1);
+
+		// This line will overwrite (1,1)
+		Row row = sheet.getRow(rowCount)
+		Cell cell = row.createCell(0);
+		cell.setCellValue(name);
+		FileOutputStream fos = new FileOutputStream("C:\\DB\\Automation\\work\\data\\UserNames.xlsx");
+		workbook.write(fos);
+		fos.close();
+
+	}
 	
-	// This line will overwrite (1,1)
-	Row row = sheet.getRow(rowCount)
-	Cell cell = row.createCell(0);
-    cell.setCellValue(name);
-    FileOutputStream fos = new FileOutputStream("C:\\DB\\Automation\\work\\data\\UserNames.xlsx");
-    workbook.write(fos);
-    fos.close();
-    
-  }
-  
-  
+	@Keyword
+	public void updateTotal(double total) throws IOException{
+		FileInputStream fis = new FileInputStream("C:\\DB\\Automation\\work\\data\\UserNames.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet("Sheet1");
+
+		int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
+
+		// This row will append to the bottom
+		//Row row = sheet.createRow(rowCount+1);
+
+		// This line will overwrite (1,1)
+		Row row = sheet.getRow(rowCount)
+		Cell cell = row.createCell(2);
+		cell.setCellValue(total);
+		FileOutputStream fos = new FileOutputStream("C:\\DB\\Automation\\work\\data\\UserNames.xlsx");
+		workbook.write(fos);
+		fos.close();
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

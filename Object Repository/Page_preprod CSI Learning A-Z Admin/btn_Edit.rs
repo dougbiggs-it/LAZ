@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img</name>
+   <name>btn_Edit</name>
    <tag></tag>
-   <elementGuidId>f60225d9-1855-4393-97af-7c1731a8176d</elementGuidId>
+   <elementGuidId>6788aaa5-0faf-445c-aa2b-4bb6d2eb5690</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>img[title=&quot;Pay&quot;]</value>
+         <key>XPATH</key>
+         <value>(//input[@value='Edit'])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='viewBillsWrapper']/div/div[2]/table/tbody/tr/td/div/ul/li/a/img</value>
+         <key>CSS</key>
+         <value>div.panelContainerHeader > input.btn.btn-default.ng-scope</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,62 +21,69 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Pay</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>src</name>
-      <type>Main</type>
-      <value>content/images/pay-icon.svg</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>width</name>
+      <name>class</name>
       <type>Main</type>
-      <value>20</value>
+      <value>btn btn-default ng-scope</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>height</name>
+      <name>value</name>
       <type>Main</type>
-      <value>20</value>
+      <value>Edit</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>$ctrl.editMember()</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-if</name>
+      <type>Main</type>
+      <value>$ctrl.canEditMember()</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;viewBillsWrapper&quot;)/div[@class=&quot;BillContainer billWarningNone&quot;]/div[@class=&quot;billingMainTable&quot;]/table[1]/tbody[1]/tr[1]/td[1]/div[@class=&quot;billingIcons&quot;]/ul[1]/li[1]/a[1]/img[1]</value>
+      <value>id(&quot;memberAccountInformation&quot;)/div[@class=&quot;panelContainerHeader&quot;]/input[@class=&quot;btn btn-default ng-scope&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id='viewBillsWrapper']/div/div[2]/table/tbody/tr/td/div/ul/li/a/img</value>
+      <value>(//input[@value='Edit'])[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:img</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//img[@title='Pay']</value>
+      <value>//div[@id='memberAccountInformation']/div/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li/a/img</value>
+      <value>//div/div/div/input</value>
    </webElementXpaths>
 </WebElementEntity>

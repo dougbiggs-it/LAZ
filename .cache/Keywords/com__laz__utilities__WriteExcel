@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "BD57133B9D7D2E0B7448AF9FAB0B1140",
+  "keywordFileContentHash": "760F8191F5BAF897AE6312FCBF4FDF27",
   "keywordClasses": [
     {
       "name": "com.laz.utilities.WriteExcel",
@@ -16,6 +16,25 @@
                 "isArray": false,
                 "isGnericsPlaceHolder": false,
                 "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "updateTotal",
+          "parameters": [
+            {
+              "name": "total",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "double",
+                "unresolvedClassName": "double",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
                 "genericsTypes": [],
                 "errorOnParsing": false
               }

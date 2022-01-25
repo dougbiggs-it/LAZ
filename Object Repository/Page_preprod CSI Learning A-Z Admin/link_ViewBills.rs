@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_View Bills</name>
+   <name>link_ViewBills</name>
    <tag></tag>
-   <elementGuidId>bc205537-6106-4429-877d-af1eaa5b5705</elementGuidId>
+   <elementGuidId>14877f6b-74b4-422d-98b2-dcce149f8e33</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>CSS</key>
-         <value>side-nav-item[name=&quot;viewBills&quot;] > a.navItem.level1</value>
-      </entry>
       <entry>
          <key>XPATH</key>
          <value>//div[@id='fixedNav']/ng-transclude/side-nav-item[7]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>side-nav-item[name=&quot;viewBills&quot;] > a.navItem.level1</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -35,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>ng-href</name>
       <type>Main</type>
-      <value>index.php?module=ViewBills&amp;member_id=8890697</value>
+      <value>index.php?module=ViewBills&amp;member_id=8898725</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -77,7 +77,7 @@
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
-      <value>index.php?module=ViewBills&amp;member_id=8890697</value>
+      <value>index.php?module=ViewBills&amp;member_id=8898725</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -147,7 +147,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>//a[contains(@href, 'index.php?module=ViewBills&amp;member_id=8890697')]</value>
+      <value>//a[contains(@href, 'index.php?module=ViewBills&amp;member_id=8898725')]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>

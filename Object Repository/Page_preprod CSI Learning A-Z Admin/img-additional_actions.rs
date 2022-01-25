@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img</name>
+   <name>img-additional_actions</name>
    <tag></tag>
-   <elementGuidId>3d42322b-def9-4534-af63-17eb728e43e0</elementGuidId>
+   <elementGuidId>29c914c7-4a72-4783-881c-32eb166af5b3</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='memberAccountInformation']/member-info/div/account-info/div/div[2]/div[9]/content-toggle/div[3]/div/img</value>
+      </entry>
       <entry>
          <key>CSS</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[@id='memberAccountInformation']/member-info/div/account-info/div/div[2]/content-toggle/div[3]/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -56,20 +56,20 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;memberAccountInformation&quot;)/member-info[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;bootstrap-styles memberAccountContent&quot;]/account-info[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;panel panel-primary&quot;]/div[@class=&quot;memberInformationBody&quot;]/content-toggle[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;additionalContentHeader&quot;]/div[@class=&quot;additionalContentTag&quot;]/img[1]</value>
+      <value>id(&quot;memberAccountInformation&quot;)/member-info[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;bootstrap-styles memberAccountContent&quot;]/account-info[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;panel panel-primary&quot;]/div[@class=&quot;memberInformationBody&quot;]/div[@class=&quot;memberInfoAdditionalActions ng-scope&quot;]/content-toggle[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;additionalContentHeader&quot;]/div[@class=&quot;additionalContentTag&quot;]/img[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='memberAccountInformation']/member-info/div/account-info/div/div[2]/content-toggle/div[3]/div/img</value>
+      <value>//div[@id='memberAccountInformation']/member-info/div/account-info/div/div[2]/div[9]/content-toggle/div[3]/div/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div/img</value>
+      <value>//div[9]/content-toggle/div[3]/div/img</value>
    </webElementXpaths>
 </WebElementEntity>

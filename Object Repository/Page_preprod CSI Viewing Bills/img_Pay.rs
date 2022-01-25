@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Email_action</name>
+   <name>img_Pay</name>
    <tag></tag>
-   <elementGuidId>1545dfbd-12ea-4283-9334-fadebd476dfd</elementGuidId>
+   <elementGuidId>2afbbe52-0f5a-4e63-b585-fa050ab07f89</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>td > input[name=&quot;action&quot;]</value>
+         <key>XPATH</key>
+         <value>//div[@id='viewBillsWrapper']/div/div[2]/table/tbody/tr/td/div/ul/li/a/img</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//input[@name='action'])[2]</value>
+         <key>CSS</key>
+         <value>img[title=&quot;Pay&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,62 +21,62 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>title</name>
       <type>Main</type>
-      <value>submit</value>
+      <value>Pay</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>name</name>
+      <name>src</name>
       <type>Main</type>
-      <value>action</value>
+      <value>content/images/pay-icon.svg</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>value</name>
+      <name>width</name>
       <type>Main</type>
-      <value>Record Purchase Order</value>
+      <value>20</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>onclick</name>
+      <name>height</name>
       <type>Main</type>
-      <value>return checkForDuplicatePayment(this.form, this, this.form.po_number.value, this.form.po_amount.value,2182.00, 9629830);</value>
+      <value>20</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;poForm&quot;)/table[1]/tbody[1]/tr[2]/td[1]/input[1]</value>
+      <value>id(&quot;viewBillsWrapper&quot;)/div[@class=&quot;BillContainer billWarningNone&quot;]/div[@class=&quot;billingMainTable&quot;]/table[1]/tbody[1]/tr[1]/td[1]/div[@class=&quot;billingIcons&quot;]/ul[1]/li[1]/a[1]/img[1]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>(//input[@name='action'])[2]</value>
+      <value>//div[@id='viewBillsWrapper']/div/div[2]/table/tbody/tr/td/div/ul/li/a/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:img</name>
       <type>Main</type>
-      <value>//form[@id='poForm']/table/tbody/tr[2]/td/input</value>
+      <value>//img[@title='Pay']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[2]/td/input</value>
+      <value>//li/a/img</value>
    </webElementXpaths>
 </WebElementEntity>

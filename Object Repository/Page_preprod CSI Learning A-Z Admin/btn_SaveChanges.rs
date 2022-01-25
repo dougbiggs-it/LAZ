@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Save Changes</name>
+   <name>btn_SaveChanges</name>
    <tag></tag>
    <elementGuidId>419bde80-66b9-4991-93e6-bb9794b28037</elementGuidId>
    <selectorCollection>
@@ -56,7 +56,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[@class=&quot;-normalize&quot;]/body[@class=&quot;ng-scope&quot;]/edit-member-information[@class=&quot;ng-scope ng-isolate-scope&quot;]/div[@class=&quot;modalWindow modalWindowViewAccounts editMemberInfo&quot;]/div[@class=&quot;bootstrap-styles modalWindow_body&quot;]/div[@class=&quot;panel panel-primary&quot;]/form[@class=&quot;ng-valid-maxlength ng-valid-pattern ng-valid ng-valid-required ng-valid-email ng-dirty ng-valid-parse&quot;]/div[@class=&quot;editControls&quot;]/button[@class=&quot;btn btn-default&quot;]</value>
+      <value>/html[@class=&quot;-normalize&quot;]/body[@class=&quot;ng-scope&quot;]/edit-member-information[@class=&quot;ng-scope ng-isolate-scope&quot;]/div[@class=&quot;modalWindow modalWindowViewAccounts editMemberInfo&quot;]/div[@class=&quot;bootstrap-styles modalWindow_body&quot;]/div[@class=&quot;panel panel-primary&quot;]/form[@class=&quot;ng-pristine ng-valid-maxlength ng-valid-pattern ng-valid ng-valid-required ng-valid-email&quot;]/div[@class=&quot;editControls&quot;]/button[@class=&quot;btn btn-default&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

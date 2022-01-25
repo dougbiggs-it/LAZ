@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Member Information_btn btn-default ng-scope</name>
+   <name>val_GrandTotalWithTwoOfEveryClassroom</name>
    <tag></tag>
-   <elementGuidId>b2bd0641-baa5-4f4a-8117-1abd24630f51</elementGuidId>
+   <elementGuidId>88e88cf8-584d-4f9b-8ce0-ed403a9bb711</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.panelContainerHeader > input.btn.btn-default.ng-scope</value>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Total'])[2]/following::span[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//input[@value='Edit'])[2]</value>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,69 +21,64 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn-default ng-scope</value>
+      <value>total</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>text</name>
       <type>Main</type>
-      <value>button</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>value</name>
-      <type>Main</type>
-      <value>Edit</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-click</name>
-      <type>Main</type>
-      <value>$ctrl.editMember()</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-if</name>
-      <type>Main</type>
-      <value>$ctrl.canEditMember()</value>
+      <value>
+							$2182.00
+						</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;memberAccountInformation&quot;)/div[@class=&quot;panelContainerHeader&quot;]/input[@class=&quot;btn btn-default ng-scope&quot;]</value>
+      <value>id(&quot;orderInfo&quot;)/div[@class=&quot;summary-column&quot;]/div[@class=&quot;cart-summary&quot;]/div[@class=&quot;cart-summary&quot;]/div[@class=&quot;order-summary&quot;]/table[@class=&quot;order-table&quot;]/tbody[1]/tr[15]/td[3]/span[@class=&quot;total&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>(//input[@value='Edit'])[2]</value>
+      <value>//div[@id='orderInfo']/div[2]/div/div/div/table/tbody/tr[15]/td[3]/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//div[@id='memberAccountInformation']/div/input</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Total'])[2]/following::span[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add Discount Code'])[1]/preceding::span[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Add Discount Code:'])[1]/preceding::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div/div/div/input</value>
+      <value>//td[3]/span</value>
    </webElementXpaths>
 </WebElementEntity>

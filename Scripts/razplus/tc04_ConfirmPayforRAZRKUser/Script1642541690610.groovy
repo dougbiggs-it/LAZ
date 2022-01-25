@@ -28,23 +28,20 @@ import org.openqa.selenium.Keys as Keys
   This script does the following:
   
   1. Logs into: pre.csi.learninga-z.com
-  2. Gets AutoUser from datasheet: Usernames
+  2. Gets AutoUser from datasheet: Usernames --> READ-IN USERNAME FROM DATAFILE (Usernames)
   2. Searches for user from datafile
   3. Changes the "Is Test" field to "YES"
   4. Views the bills
-  5. Pays the outstanding P.O. for the new user
+  5. Compares the outstanding amount vs. the value read-in from datafile
+  6. Pays the outstanding P.O. for the new user
   
    Notes:
 	
  */
 
 
-
-
 WebUI.openBrowser('')
 WebUI.maximizeWindow()
-
-
 
 
 // DUO Authentication
@@ -53,36 +50,100 @@ WebUI.navigateToUrl('pre.csi.learninga-z.com')
 
 Thread.sleep(15000)
 
+
+
 // #24 Search for user -- Get AutoUser from datasheet: Usernames
+
+// *************************************************
+// **  	   READ-IN USERNAME AND TOTAL FROM DATAFILE         **
+// *************************************************
 WebUI.setText(findTestObject('Object Repository/Page_preprod CSI Welcome to the Administrat_27435e/input_Username or Bill ID_globaltextfield'), findTestData('Usernames').getValue('user', 1))
+// Read-in total from datafile
+def total_fromDataFile = findTestData('Usernames').getValue('total', 1)
+System.out.println('  Total from datafile: ' +total_fromDataFile)
+
+
+// Click Search
 WebUI.click(findTestObject('Object Repository/Page_preprod CSI Welcome to the Administrat_27435e/button_Search'))
-
-Thread.sleep(20000)
-
-
+Thread.sleep(2000)
 
 
 // *** NOT SURE IF WE NEED THESE ***
-WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/img'))
-WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/img'))
-WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/input_Member Information_btn btn-default ng-scope'))
+// Expanding the [+]Additional Information, [+]Additional Actions
+//WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/additional_information'))
+//WebUI.click(findTestObject('Page_preprod CSI Learning A-Z Admin/img-additional_actions'))
 
 
+// #26 Click Edit
+WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/btn_Edit'))
 
 // #26 Change the "Is Test" field to "YES"
 WebUI.selectOptionByValue(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/select_YesNo'), 'boolean:true', true)
 
 // #26 Save Changes
-WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/button_Save Changes'))
+WebUI.click(findTestObject('Page_preprod CSI Learning A-Z Admin/btn_SaveChanges'))
+
 
 // #27 Click View Bills
-WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/a_View Bills'))
+WebUI.click(findTestObject('Object Repository/Page_preprod CSI Learning A-Z Admin/link_ViewBills'))
+Thread.sleep(2000)
 
-WebUI.click(findTestObject('Object Repository/Page_preprod CSI Viewing Bills/img'))
 
+
+// Get entire text for 'pay bill' summary
+def str = WebUI.getText(findTestObject('Object Repository/Page_preprod CSI Pay Bill/PayBill_Summary'))
+// Visual cue sent to the console
+//System.out.println('PayBill Summary: ' +str)
+
+// Put strings into array and parse them
+def String[] s = str.split("\\\$")
+def String[] bID = str.split("Bill Id: ")
+
+// Save to variables
+def strBillID = bID[1].substring(0, 7)
+def strAmountOwed = s[2].substring(0, 8)
+
+// Display bill "Invoice Number" from *Pay Bill* screen
+System.out.println('  BillID: ' +strBillID)
+
+// Display "Amount Owed" from *Pay Bill* screen (as string)
+System.out.println('  Amount Owed (string): ' +strAmountOwed)
+
+
+// Must reformat the string then convert to double for comparison later (approx line 140)
+// Remove ","
+temp1 = strAmountOwed.replace(',', '')
+System.out.println('  temp1: ' +temp1)
+// Remove ".00"
+formatted_strAmountOwed = temp1.replace('.00', '')
+System.out.println('  formatted_strAmountOwed: ' +formatted_strAmountOwed)
+
+// Convert to double
+def double_AmountOwed = Double.parseDouble(formatted_strAmountOwed)
+
+// Display "Amount Owed" from *Pay Bill* screen (as double)
+System.out.println('  Amount Owed (double): ' +double_AmountOwed)
+
+
+// #28 Click the pay icon
+WebUI.click(findTestObject('Object Repository/Page_preprod CSI Viewing Bills/img_Pay'))
+
+// #28 P.O. Number
 WebUI.setText(findTestObject('Object Repository/Page_preprod CSI Pay Bill/input_P.O. Number_po_number'), 'PO_autouser')
 
+// #28 Amount owed
 WebUI.setText(findTestObject('Object Repository/Page_preprod CSI Pay Bill/input_P.O. Amount_po_amount'), '2182.00')
 
-WebUI.rightClick(findTestObject('Object Repository/Page_preprod CSI Pay Bill/input_Email_action'))
 
+
+// Compare the "double_AmountOwed" from the page vs read-in 'total' from datafile
+// Put an If statement here to report that the "ACTUAL" unit price is/isNot equal to the "EXPECTED" unit price
+if (WebUI.verifyEqual(double_AmountOwed, total_fromDataFile, FailureHandling.CONTINUE_ON_FAILURE)) {
+	System.out.println('  Passed -- Values are equal')
+} else {
+	System.out.println('  Failed -- Values from datafile do not match the values from the page')
+}
+
+
+// #28 Click Record Purchase Order
+WebUI.rightClick(findTestObject('Object Repository/Page_preprod CSI Pay Bill/input_RecordPurchaseOrder'))

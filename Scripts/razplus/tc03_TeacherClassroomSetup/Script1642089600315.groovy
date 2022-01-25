@@ -21,6 +21,7 @@ import org.openqa.selenium.Keys as Keys
 
   Assumptions: User is ready to checkout.
   Dependencies:
+  Reusables: tc02_AddTeacherCheckOut
   Author:	Doug Biggs
   Date Created:	01-13-2022
   Date Updated: 

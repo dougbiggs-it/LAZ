@@ -41,6 +41,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
   2. Defines contact details.   *Hard-coded, should probably be in a data file that gets read in*
   3. Provides user (Teacher) information and payment method
   4. Generate a quote.	**Method to call to turn on/off the "Generate Quote" steps**
+  5. --> WRITE USERNAME TO DATAFILE (Usernames)
   
   Notes:  Email address should be changed to generic service account that can be monitored
   
@@ -152,11 +153,36 @@ WebUI.click(radio_checkmoneyorder)
 // Confirm I understand
 WebUI.click(input_confirmation)
 
+
+
+
+// Get the amount owed as String
+String strGrandTotalWithTwoOfEveryClassroom = WebUI.getText(findTestObject('Object Repository/Page_Learning A-Z Ordering - Cart/val_GrandTotalWithTwoOfEveryClassroom'))
+System.out.println('  strGrandTotalWithTwoOfEveryClassroom (double): ' +strGrandTotalWithTwoOfEveryClassroom)
+
+// Remove the "$"
+def temp = strGrandTotalWithTwoOfEveryClassroom.substring(1, strGrandTotalWithTwoOfEveryClassroom.length() - 1)
+
+// Convert to double
+def double_GrandTotalWithTwoOfEveryClassroom = Double.parseDouble(temp)
+
+
+
+
+// Display "Amount Owed" from *Pay Bill* screen as a double
+System.out.println('  GrandTotalWithTwoOfEveryClassroom (double): ' +double_GrandTotalWithTwoOfEveryClassroom)
+
+
 // Use this call to turn on/off the "Generate Quote" steps
 GenerateQuote()
 
-// Write str_username to Usernames datafile
+
+// *************************************************
+// **  	 WRITE USERNAME AND TOTAL TO DATAFILE     **
+// *************************************************
+
 CustomKeywords.'com.laz.utilities.WriteExcel.updateUsername'(str_username)
+CustomKeywords.'com.laz.utilities.WriteExcel.updateTotal'(double_GrandTotalWithTwoOfEveryClassroom)
 
 
 def GenerateQuote() {
