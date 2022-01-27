@@ -67,11 +67,11 @@ for (i; i<=9; i++) {
 }
 
 // Increase # of Classrooms to 2
-def counter = 1
-for (counter; counter<=9; counter++) {
+def cr = 1
+for (cr; cr<=9; cr++) {
 	
 	// Reload ProdID from datasheet
-	prodID = findTestData('Prices_2021').getValue('ProdID', counter)
+	prodID = findTestData('Prices_2021').getValue('ProdID', cr)
 	
 	def txt_AddClassroomCount = findTestObject('Object Repository/Page_Learning A-Z Ordering - Cart/input_ClassroomCount_' +prodID)
 	
@@ -82,7 +82,7 @@ for (counter; counter<=9; counter++) {
 }
 
 // Call Checkout script
-WebUI.callTestCase(findTestCase('razplus/tc02_AddTeacherCheckOut'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('razplus/rp-tc02-AddTeacherCheckOut'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
 

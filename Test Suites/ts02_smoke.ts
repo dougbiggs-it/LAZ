@@ -12,29 +12,20 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>9900d61d-6d44-4e00-a4f3-8ee2ca58bd95</testSuiteGuid>
    <testCaseLink>
-      <guid>96369527-7f1e-433c-9fc7-e4a438829ef9</guid>
+      <guid>2a8d71a2-e5fa-44a8-abee-26af69e6045f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/razplus/tc04_ConfirmPayforRAZRKUser</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>05a18b06-6245-438e-a88c-98c25a5b63fa</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/Usernames</testDataId>
-      </testDataLink>
+      <testCaseId>Test Cases/razplus/rp-tc04-ConfirmPayforRPRKUser</testCaseId>
       <variableLink>
-         <testDataLinkId>05a18b06-6245-438e-a88c-98c25a5b63fa</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>user</value>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
          <variableId>64d9e218-6db4-4ef7-9715-e74038db6ceb</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>05a18b06-6245-438e-a88c-98c25a5b63fa</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>pwd</value>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
          <variableId>91bfcdd1-1462-46fe-b25b-997109699812</variableId>
       </variableLink>
    </testCaseLink>

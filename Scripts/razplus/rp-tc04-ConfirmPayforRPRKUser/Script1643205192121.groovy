@@ -48,15 +48,16 @@ WebUI.maximizeWindow()
 //WebUI.navigateToUrl('https://sso.cambiumlearning.com/adfs/ls/wia?SAMLRequest=hVLbTgIxFPyVTd93y1aXSwMkCDGSeCGAPvhiSvesNOll7WlF%2FXqXRSI+qE9NpzNzppMzRGF0zScxbO0SXiJgSN6MtsjbhxGJ3nInUCG3wgDyIPlqcnPNWdbhtXfBSafJieRvhUAEH5SzJJnPRuRJ5P1e0T+rqp4c9Mqy2uSsJ4sBOx90C5n3WReg2pSSyTOSPIDHRjkijVEjR4wwtxiEDQ3UYSzt5GneX7OcF+e86DySZNb8RlkRWtU2hBo5pYguk8JsVDQahLfKPmfSGSrKCqlGSpLJMeTUWYwG%2FAr8q5Jwv7z+tqk9ZBJVdvQQ6Udrg8rUGtrytjXd7XbUuDJqyPbXPUzxcLJUSGzRrzQp1iRZfFV6oWzZuP7d5uZAQn61Xi%2FSxd1qTcbDvTdv2%2FHjf8IO6Sl5eFiF22bMfLZwWsn35NJ5I8LvKfIsbxFVplVL5dFiDVJVCsqmSa3dbupBBBiR4CMQOj4M%2Fbly408%3D&RelayState=https%3A%2F%2Fpre.csi.learninga-z.com%2Findex.php%3Fmodule%3DCSILogin%26sso%3Dauto&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=Q7ff2SUpcw6Jww79Kxs5Id+%2FDBmqXnw8ebRTbfrgtrS+Tr%2FXfsEtvQRh1C%2FSM+Xss0Wyfha0eDvL6fn6tIEQdEy5qQEK%2FROyJbOZhjnM%2FdaYi2YwYyYNhyrxIBMGkHiOiNF+WNeM28wDUxnAioz3MB7sHYWBW6oJxxXHf7O0TkrbK5czmwRR1cDJ3UIsY8FZOuXjattBtvc6MSxwEtdZwX4KntP7w7bcf4xQdt9w+MNc58BvN4bb3p6eHjlfPrlQmhyH1Ah5+DyLP%2Fz5%2FLEinbTFwPRVQe44CePl05myiT18uvzhGJDLAjVj3iHvJVopXm+s5lTZQkOU43KG6urlJg%3D%3D&client-request-id=5ece24b2-7e62-4985-2235-0080010000bd&pullStatus=0&deviceAuthenticationMethod=TlsHandler')
 WebUI.navigateToUrl('pre.csi.learninga-z.com')
 
-Thread.sleep(15000)
+Thread.sleep(30000)
 
 
 
 // #24 Search for user -- Get AutoUser from datasheet: Usernames
-
-// *************************************************
-// **  	   READ-IN USERNAME AND TOTAL FROM DATAFILE         **
-// *************************************************
+//
+// *******************************************************
+// **  	   READ-IN USERNAME AND TOTAL FROM DATAFILE     **
+// *******************************************************
+//
 WebUI.setText(findTestObject('Object Repository/Page_preprod CSI Welcome to the Administrat_27435e/input_Username or Bill ID_globaltextfield'), findTestData('Usernames').getValue('user', 1))
 // Read-in total from datafile
 def total_fromDataFile = findTestData('Usernames').getValue('total', 1)
@@ -119,10 +120,10 @@ formatted_strAmountOwed = temp1.replace('.00', '')
 System.out.println('  formatted_strAmountOwed: ' +formatted_strAmountOwed)
 
 // Convert to double
-def double_AmountOwed = Double.parseDouble(formatted_strAmountOwed)
+def dblAmountOwed = Double.parseDouble(formatted_strAmountOwed)
 
 // Display "Amount Owed" from *Pay Bill* screen (as double)
-System.out.println('  Amount Owed (double): ' +double_AmountOwed)
+System.out.println('  Amount Owed (double): ' +dblAmountOwed)
 
 
 // #28 Click the pay icon
@@ -138,7 +139,7 @@ WebUI.setText(findTestObject('Object Repository/Page_preprod CSI Pay Bill/input_
 
 // Compare the "double_AmountOwed" from the page vs read-in 'total' from datafile
 // Put an If statement here to report that the "ACTUAL" unit price is/isNot equal to the "EXPECTED" unit price
-if (WebUI.verifyEqual(double_AmountOwed, total_fromDataFile, FailureHandling.CONTINUE_ON_FAILURE)) {
+if (WebUI.verifyEqual(dblAmountOwed, total_fromDataFile, FailureHandling.CONTINUE_ON_FAILURE)) {
 	System.out.println('  Passed -- Values are equal')
 } else {
 	System.out.println('  Failed -- Values from datafile do not match the values from the page')
@@ -147,3 +148,15 @@ if (WebUI.verifyEqual(double_AmountOwed, total_fromDataFile, FailureHandling.CON
 
 // #28 Click Record Purchase Order
 WebUI.rightClick(findTestObject('Object Repository/Page_preprod CSI Pay Bill/input_RecordPurchaseOrder'))
+
+
+
+
+
+
+
+
+
+
+
+

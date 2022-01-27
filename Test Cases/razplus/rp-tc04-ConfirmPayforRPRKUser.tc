@@ -3,7 +3,7 @@
    <description>steps 22 thru 32 
 Doc:  _Test Plan - Smoke Test Google Doc
 Tab:   Create New Classroom w/RAZ &amp; RK</description>
-   <name>tc04_ConfirmPayforRAZRKUser</name>
+   <name>rp-tc04-ConfirmPayforRPRKUser</name>
    <tag>smoke</tag>
    <comment></comment>
    <testCaseGuid>84bcd04e-687b-445e-aaab-22b5a50c0ee2</testCaseGuid>

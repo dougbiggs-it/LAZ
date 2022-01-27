@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>tc02_AddTeacherCheckOut</name>
+   <name>rp-tc01-AddProductCheckOrderSummary</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>a2561c3c-e7d9-47f1-9330-ac0196f2d0a2</testCaseGuid>
+   <testCaseGuid>329381fc-503d-4c3c-951f-a7c52b8f3142</testCaseGuid>
 </TestCaseEntity>

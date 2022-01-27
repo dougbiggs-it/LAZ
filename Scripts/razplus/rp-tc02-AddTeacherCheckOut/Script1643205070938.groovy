@@ -164,13 +164,13 @@ System.out.println('  strGrandTotalWithTwoOfEveryClassroom (double): ' +strGrand
 def temp = strGrandTotalWithTwoOfEveryClassroom.substring(1, strGrandTotalWithTwoOfEveryClassroom.length() - 1)
 
 // Convert to double
-def double_GrandTotalWithTwoOfEveryClassroom = Double.parseDouble(temp)
+def dblGrandTotalWithTwoOfEveryClassroom = Double.parseDouble(temp)
 
 
 
 
 // Display "Amount Owed" from *Pay Bill* screen as a double
-System.out.println('  GrandTotalWithTwoOfEveryClassroom (double): ' +double_GrandTotalWithTwoOfEveryClassroom)
+System.out.println('  GrandTotalWithTwoOfEveryClassroom (double): ' +dblGrandTotalWithTwoOfEveryClassroom)
 
 
 // Use this call to turn on/off the "Generate Quote" steps
@@ -182,7 +182,7 @@ GenerateQuote()
 // *************************************************
 
 CustomKeywords.'com.laz.utilities.WriteExcel.updateUsername'(str_username)
-CustomKeywords.'com.laz.utilities.WriteExcel.updateTotal'(double_GrandTotalWithTwoOfEveryClassroom)
+CustomKeywords.'com.laz.utilities.WriteExcel.updateTotal'(dblGrandTotalWithTwoOfEveryClassroom)
 
 
 def GenerateQuote() {
